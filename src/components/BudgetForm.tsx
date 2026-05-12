@@ -92,8 +92,8 @@ export function BudgetForm() {
       <div className="section-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <SectionHeading
           eyebrow="Contato"
-          title="Entre em contato para saber disponibilidade e valores"
-          description="Preencha o formulário com discrição e retornarei com orientações sobre o atendimento, modalidades disponíveis e demais informações."
+          title="Solicite informações sobre atendimento"
+          description="Preencha o formulário para receber orientações sobre disponibilidade, valores e formato de atendimento."
         />
 
         <form

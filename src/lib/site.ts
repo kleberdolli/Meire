@@ -160,9 +160,9 @@ export const faqItems = [
       "A frequência é definida de forma individualizada, geralmente semanal ou quinzenal, de acordo com o plano terapêutico.",
   },
   {
-    question: "Como saber sobre disponibilidade e valores?",
+    question: "Como solicitar informações sobre atendimento?",
     answer:
-      "Você pode preencher o formulário de contato nesta página ou enviar uma mensagem pelo WhatsApp para receber orientações sobre disponibilidade e informações sobre o atendimento.",
+      "Você pode preencher o formulário de contato nesta página ou enviar uma mensagem pelo WhatsApp para receber orientações sobre disponibilidade, valores e formato de atendimento.",
   },
   {
     question: "O site substitui avaliação clínica?",

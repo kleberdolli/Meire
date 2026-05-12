@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             pessoais enviados por este site.
           </p>
           <p>
-            Os dados informados no formulário de orçamento são utilizados apenas
+            Os dados informados no formulário de contato são utilizados apenas
             para retorno de contato, organização de agenda e comunicação
             profissional relacionada ao atendimento psicológico.
           </p>

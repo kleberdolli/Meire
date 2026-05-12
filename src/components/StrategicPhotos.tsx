@@ -40,8 +40,8 @@ export function StrategicPhotos() {
       <div className="section-shell space-y-12">
         <SectionHeading
           eyebrow="Ambiente"
-          title="Um espaço pensado para o seu bem-estar"
-          description="Ambiente seguro, acolhedor e discreto para que você se sinta à vontade desde o primeiro momento."
+          title="Um espaço pensado para acolher com discrição e cuidado"
+          description="Ambiente seguro, acolhedor e reservado para que o processo terapêutico aconteça com conforto, ética e tranquilidade."
           align="center"
         />
 
