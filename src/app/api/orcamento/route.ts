@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sendContactEmail } from "@/lib/email";
 import { sendBudgetNotificationToTelegram } from "@/lib/telegram";
 
 type ContactPayload = {
@@ -36,15 +37,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Informe um e-mail válido." }, { status: 400 });
   }
 
-  await sendBudgetNotificationToTelegram({
-    name,
-    email,
-    phone,
-    city,
-    modality,
-    contactTime,
-    message,
-  });
+  const notification = { name, email, phone, city, modality, contactTime, message };
+
+  await Promise.allSettled([
+    sendContactEmail(notification),
+    sendBudgetNotificationToTelegram(notification),
+  ]);
 
   return NextResponse.json({ ok: true });
 }
