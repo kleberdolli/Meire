@@ -6,6 +6,8 @@ export const site = {
   education: "Pós-graduação em Neuropsicologia",
   whatsappDisplay: "71 98819-0964",
   whatsappLink: "https://wa.me/5571988190964",
+  instagramLink:
+    "https://www.instagram.com/psicologameire_ribeiro?igsh=c3R3MWExcG1jNmJt",
   whatsappMessage:
     "Olá, Meire. Gostaria de saber mais sobre o atendimento psicológico.",
   email: "contato@meireribeiro.com.br",
