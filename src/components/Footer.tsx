@@ -59,10 +59,11 @@ export function Footer() {
 
         {/* Linha divisória + direitos */}
         <div
-          className="mt-10 border-t pt-6 text-xs"
+          className="mt-10 flex flex-col gap-2 border-t pt-6 text-xs sm:flex-row sm:items-center sm:justify-between"
           style={{ borderColor: "#C9A45C26", color: "#D8C3A5" }}
         >
-          © {currentYear} {site.name}. Todos os direitos reservados.
+          <p>© {currentYear} {site.name}. Todos os direitos reservados.</p>
+          <span className="text-[#C9A45C] text-xs">TESTE RODAPÉ MARROM - v2</span>
         </div>
       </div>
     </footer>
