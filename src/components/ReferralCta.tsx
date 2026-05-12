@@ -1,10 +1,6 @@
-import { site } from "@/lib/site";
-
-const referralText = `Quero indicar a Psicóloga Meire Ribeiro! Ela é Psicóloga / Neuropsicóloga (CRP 03/13949), com atendimento presencial na Chapada Diamantina e online para todo o Brasil. Acesse: ${site.url}`;
+const SHARE_URL = "https://site-meire-ribeiro.vercel.app/";
 
 export function ReferralCta() {
-  const shareHref = `https://wa.me/?text=${encodeURIComponent(referralText)}`;
-
   return (
     <section
       aria-label="Indicar profissional"
@@ -27,10 +23,10 @@ export function ReferralCta() {
         </div>
 
         <a
-          href={shareHref}
+          href={SHARE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Indicar Meire Ribeiro pelo WhatsApp"
+          aria-label="Abrir site da Psicóloga Meire Ribeiro para indicar"
           className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C9A45C] px-7 py-3 text-sm font-semibold tracking-wide text-[#C9A45C] transition hover:bg-[#C9A45C] hover:text-[#2F241D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A45C]"
         >
           <svg
