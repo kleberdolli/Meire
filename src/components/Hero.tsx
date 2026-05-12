@@ -1,0 +1,49 @@
+import { site } from "@/lib/site";
+import { Button } from "@/components/ui/Button";
+import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
+
+export function Hero() {
+  const whatsappHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
+
+  return (
+    <section id="inicio" className="relative overflow-hidden pb-20 pt-10 sm:pb-24 sm:pt-16">
+      <div className="absolute inset-x-0 top-0 h-72 bg-[radial-gradient(circle_at_top,rgba(184,150,94,0.18),transparent_70%)]" />
+      <div className="section-shell relative grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="flex flex-col gap-8">
+          <div className="inline-flex w-fit items-center gap-3 rounded-full border border-gold/25 bg-surface/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+            <span className="h-2 w-2 rounded-full bg-gold" />
+            {site.specialty}
+          </div>
+
+          <div className="space-y-5">
+            <h1 className="max-w-2xl font-serif text-4xl leading-[1.05] text-coffee-deep sm:text-5xl lg:text-6xl">
+              Um espaço acolhedor para cuidar da sua saúde emocional com
+              profissionalismo.
+            </h1>
+            <p className="max-w-xl text-lg leading-8 text-muted">
+              Atendimento psicológico com {site.shortName}, com escuta atenta,
+              ética e base na Terapia Cognitivo-Comportamental.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button href="#orcamento">Solicitar orçamento</Button>
+            <Button href={whatsappHref} variant="secondary">
+              Conversar no WhatsApp
+            </Button>
+          </div>
+
+          <p className="text-sm text-muted">
+            CRP {site.crp} · {site.education}
+          </p>
+        </div>
+
+        <PhotoPlaceholder
+          label="Meire Ribeiro"
+          description="Substitua este espaço pela foto profissional da psicóloga."
+          aspectClassName="aspect-[4/5] lg:min-h-[28rem]"
+        />
+      </div>
+    </section>
+  );
+}

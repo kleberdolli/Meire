@@ -1,0 +1,41 @@
+import { NextResponse } from "next/server";
+import { sendBudgetNotificationToTelegram } from "@/lib/telegram";
+
+type BudgetPayload = {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+};
+
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+export async function POST(request: Request) {
+  const body = (await request.json()) as BudgetPayload;
+  const name = body.name?.trim() ?? "";
+  const email = body.email?.trim() ?? "";
+  const phone = body.phone?.trim() ?? "";
+  const message = body.message?.trim() ?? "";
+
+  if (!name || !email || !phone || !message) {
+    return NextResponse.json(
+      { error: "Preencha todos os campos obrigatórios." },
+      { status: 400 },
+    );
+  }
+
+  if (!isValidEmail(email)) {
+    return NextResponse.json({ error: "Informe um e-mail válido." }, { status: 400 });
+  }
+
+  await sendBudgetNotificationToTelegram({
+    name,
+    email,
+    phone,
+    message,
+  });
+
+  return NextResponse.json({ ok: true });
+}

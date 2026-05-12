@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f2ea;
+  --foreground: #3f2f26;
+  --sand: #f7f2ea;
+  --beige: #e8dfd2;
+  --earth: #c4b59f;
+  --coffee: #4a3428;
+  --coffee-deep: #2f2119;
+  --gold: #b8965e;
+  --gold-soft: #d8c3a0;
+  --surface: #fffdf9;
+  --muted: #6f5d4f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sand: var(--sand);
+  --color-beige: var(--beige);
+  --color-earth: var(--earth);
+  --color-coffee: var(--coffee);
+  --color-coffee-deep: var(--coffee-deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-cormorant);
+  --shadow-soft: 0 18px 50px rgb(74 52 40 / 0.08);
+  --shadow-card: 0 12px 30px rgb(74 52 40 / 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-source-sans), sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 28%, white);
+  color: var(--coffee-deep);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+.gold-line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--gold) 70%, white),
+    transparent
+  );
+}

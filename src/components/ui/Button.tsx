@@ -1,0 +1,60 @@
+import Link from "next/link";
+import type { ComponentProps } from "react";
+
+type ButtonVariant = "primary" | "secondary" | "ghost" | "whatsapp";
+
+const variantClasses: Record<ButtonVariant, string> = {
+  primary:
+    "bg-coffee text-sand shadow-card hover:bg-coffee-deep focus-visible:outline-coffee",
+  secondary:
+    "border border-gold/40 bg-surface text-coffee hover:border-gold hover:bg-beige/60 focus-visible:outline-gold",
+  ghost:
+    "bg-transparent text-coffee hover:bg-beige/70 focus-visible:outline-coffee",
+  whatsapp:
+    "bg-[#1f7a4d] text-white shadow-card hover:bg-[#17633d] focus-visible:outline-[#1f7a4d]",
+};
+
+type ButtonProps = ComponentProps<"button"> & {
+  href?: string;
+  variant?: ButtonVariant;
+};
+
+export function Button({
+  href,
+  variant = "primary",
+  className = "",
+  children,
+  type,
+  ...props
+}: ButtonProps) {
+  const classes = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${variantClasses[variant]} ${className}`;
+
+  if (href) {
+    const isExternal = href.startsWith("http");
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
+
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <button type={type ?? "button"} className={classes} {...props}>
+      {children}
+    </button>
+  );
+}
