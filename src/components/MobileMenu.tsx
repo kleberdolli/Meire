@@ -1,13 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { navigation, site } from "@/lib/site";
-import { Button } from "@/components/ui/Button";
+import { navigation } from "@/lib/site";
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const whatsappHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
 
   useEffect(() => {
     if (!open) return;
@@ -58,9 +56,6 @@ export function MobileMenu() {
                 {item.label}
               </a>
             ))}
-            <Button href={whatsappHref} variant="headerCta" className="w-full">
-              Falar no WhatsApp
-            </Button>
           </nav>
         </div>
       ) : null}

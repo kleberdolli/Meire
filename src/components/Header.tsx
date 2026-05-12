@@ -1,10 +1,7 @@
 import { navigation, site } from "@/lib/site";
-import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/MobileMenu";
 
 export function Header() {
-  const whatsappHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
-
   return (
     <header
       className="sticky top-0 z-40 border-b backdrop-blur-md"
@@ -36,9 +33,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href={whatsappHref} variant="headerCta" className="hidden sm:inline-flex">
-            WhatsApp
-          </Button>
           <MobileMenu />
         </div>
       </div>
