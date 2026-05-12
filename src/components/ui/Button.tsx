@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "whatsapp";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "whatsapp" | "headerCta";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
@@ -12,6 +12,8 @@ const variantClasses: Record<ButtonVariant, string> = {
     "bg-transparent text-coffee hover:bg-beige/70 focus-visible:outline-coffee",
   whatsapp:
     "border border-[#2d9e65]/40 bg-[#1f7a4d]/60 text-white backdrop-blur-sm hover:bg-[#1f7a4d]/80 focus-visible:outline-[#1f7a4d] !px-5 !py-2.5 !text-xs",
+  headerCta:
+    "border border-[#C9A45C] bg-[#C9A45C] text-[#2F241D] hover:bg-[#E5D0A3] hover:text-[#2F241D] focus-visible:outline-[#C9A45C] !px-5 !py-2.5 !text-xs",
 };
 
 type ButtonProps = ComponentProps<"button"> & {

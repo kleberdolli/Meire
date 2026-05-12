@@ -31,7 +31,7 @@ export function MobileMenu() {
         aria-controls="mobile-menu"
         aria-label={open ? "Fechar menu" : "Abrir menu"}
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-gold/30 bg-surface text-coffee"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A45C]/45 bg-transparent text-[#F4EDE3] transition hover:border-[#C9A45C] hover:bg-[rgb(201_164_92_/0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A45C]"
       >
         <span aria-hidden className="text-lg">
           {open ? "×" : "≡"}
@@ -41,7 +41,11 @@ export function MobileMenu() {
       {open ? (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-full border-b border-gold/15 bg-sand px-5 py-6 shadow-soft"
+          className="absolute inset-x-0 top-full border-b px-5 py-6 shadow-[0_12px_40px_rgb(0_0_0_/0.25)]"
+          style={{
+            background: "#2F241D",
+            borderColor: "rgb(201 164 92 / 0.22)",
+          }}
         >
           <nav className="flex flex-col gap-4" aria-label="Navegação mobile">
             {navigation.map((item) => (
@@ -49,12 +53,12 @@ export function MobileMenu() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-base font-medium text-coffee"
+                className="text-base font-medium text-[#F4EDE3] transition hover:text-[#C9A45C] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A45C]"
               >
                 {item.label}
               </a>
             ))}
-            <Button href={whatsappHref} variant="whatsapp" className="w-full">
+            <Button href={whatsappHref} variant="headerCta" className="w-full">
               Falar no WhatsApp
             </Button>
           </nav>
