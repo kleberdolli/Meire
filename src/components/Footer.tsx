@@ -4,11 +4,13 @@ import { site } from "@/lib/site";
 export function Footer() {
   const whatsappHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
   const currentYear = new Date().getFullYear();
+  const deploySha = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7);
 
   return (
     <footer
       className="border-t py-16"
       style={{ background: "#2F241D", borderColor: "#C9A45C26" }}
+      data-deploy-sha={deploySha ?? undefined}
     >
       <div className="section-shell">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr]">
