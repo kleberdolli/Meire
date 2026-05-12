@@ -9,7 +9,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-gold/15 bg-sand/90 backdrop-blur-md">
       <div className="section-shell flex items-center justify-between gap-4 py-4">
         <a href="#inicio" className="group flex min-w-0 flex-col">
-          <span className="font-serif text-2xl text-coffee-deep transition group-hover:text-coffee">
+          <span className="glow-text font-serif text-[2.25rem] leading-none text-coffee-deep transition group-hover:text-coffee">
             {site.shortName}
           </span>
           <span className="text-xs uppercase tracking-[0.22em] text-gold">

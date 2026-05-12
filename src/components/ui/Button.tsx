@@ -11,7 +11,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   ghost:
     "bg-transparent text-coffee hover:bg-beige/70 focus-visible:outline-coffee",
   whatsapp:
-    "bg-[#1f7a4d] text-white shadow-card hover:bg-[#17633d] focus-visible:outline-[#1f7a4d]",
+    "border border-[#2d9e65]/40 bg-[#1f7a4d]/60 text-white backdrop-blur-sm hover:bg-[#1f7a4d]/80 focus-visible:outline-[#1f7a4d] !px-5 !py-2.5 !text-xs",
 };
 
 type ButtonProps = ComponentProps<"button"> & {

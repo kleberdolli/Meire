@@ -16,7 +16,7 @@ export function Hero() {
           </div>
 
           <div className="space-y-5">
-            <h1 className="max-w-2xl font-serif text-4xl leading-[1.05] text-coffee-deep sm:text-5xl lg:text-6xl">
+            <h1 className="glow-text max-w-2xl font-serif text-4xl leading-[1.05] text-coffee-deep sm:text-5xl lg:text-6xl">
               Um espaço acolhedor para cuidar da sua saúde emocional com
               profissionalismo.
             </h1>
