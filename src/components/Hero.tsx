@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
-import { PhotoPlaceholder } from "@/components/ui/PhotoPlaceholder";
 
 export function Hero() {
   const whatsappHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
@@ -38,11 +38,16 @@ export function Hero() {
           </p>
         </div>
 
-        <PhotoPlaceholder
-          label="Meire Ribeiro"
-          description="Substitua este espaço pela foto profissional da psicóloga."
-          aspectClassName="aspect-[4/5] lg:min-h-[28rem]"
-        />
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-soft lg:min-h-[28rem]">
+          <Image
+            src="/meire-ribeiro.png"
+            alt="Psicóloga Meire Ribeiro sentada em poltrona, sorrindo, em ambiente acolhedor de consultório"
+            fill
+            className="object-cover object-top"
+            priority
+            sizes="(max-width: 1024px) 100vw, 48vw"
+          />
+        </div>
       </div>
     </section>
   );
