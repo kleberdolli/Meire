@@ -1,5 +1,6 @@
 import { About } from "@/components/About";
 import { AttendanceModalities } from "@/components/AttendanceModalities";
+import { ReferralCta } from "@/components/ReferralCta";
 import { BudgetForm } from "@/components/BudgetForm";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
         <WhatToExpect />
         <BudgetForm />
         <Faq />
+        <ReferralCta />
       </main>
       <Footer />
       <WhatsappFloat />

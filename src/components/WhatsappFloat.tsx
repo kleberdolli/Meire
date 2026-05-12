@@ -28,7 +28,7 @@ export function WhatsappFloat() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Acessar Instagram"
-        className={`${floatingButtonSize} bg-[#C9A45C] text-[#2F241D] hover:bg-[#F4EDE3]`}
+        className={`${floatingButtonSize} border border-[#C9A45C]/40 bg-[#C9A45C]/60 text-[#2F241D] backdrop-blur-sm hover:bg-[#C9A45C]/80`}
       >
         <svg
           viewBox="0 0 24 24"
