@@ -58,6 +58,16 @@ body {
     0 0 80px rgb(184 150 94 / 0.12);
 }
 
+.footer-link {
+  color: #c9a45c;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #f4ede3;
+}
+
 .gold-line {
   background: linear-gradient(
     90deg,
