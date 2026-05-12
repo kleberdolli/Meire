@@ -8,19 +8,19 @@ export function About() {
         <SectionHeading
           eyebrow="Sobre"
           title={`Conheça ${site.shortName}`}
-          description="Psicóloga com atuação baseada na TCC e formação complementar em Neuropsicologia, com compromisso com escuta, clareza e responsabilidade profissional."
+          description="Cada pessoa carrega sua bagagem de vida em uma história única. O cuidado também precisa ser."
         />
 
         <div className="space-y-6 rounded-[2rem] border border-gold/20 bg-surface p-8 shadow-card sm:p-10">
           <p className="text-base leading-8 text-muted">
-            O cuidado psicológico é construído em parceria. Meu trabalho busca
-            oferecer um ambiente seguro para compreender experiências, emoções e
-            comportamentos, respeitando o seu tempo e a sua história.
+            Meire Ribeiro é {site.profession}, com atuação clínica voltada ao
+            cuidado de adultos e idosos. Seu trabalho utiliza a Abordagem TCC —
+            Terapia Cognitivo-Comportamental, considerando a história, as
+            necessidades e o contexto de vida de cada pessoa.
           </p>
           <p className="text-base leading-8 text-muted">
-            A Terapia Cognitivo-Comportamental orienta intervenções com foco em
-            autoconhecimento, regulação emocional e mudanças práticas no
-            cotidiano, sempre com linguagem acolhedora e ética.
+            A escuta clínica é conduzida com acolhimento, ética, orientação e
+            cuidado com as expectativas do processo terapêutico.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-3xl bg-beige/70 p-5">
@@ -31,9 +31,9 @@ export function About() {
             </div>
             <div className="rounded-3xl bg-beige/70 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-                Formação
+                Público atendido
               </p>
-              <p className="mt-2 font-medium text-coffee">{site.education}</p>
+              <p className="mt-2 font-medium text-coffee">Adultos e Idosos</p>
             </div>
           </div>
         </div>

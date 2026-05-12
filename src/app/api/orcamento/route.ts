@@ -7,6 +7,7 @@ type ContactPayload = {
   email?: string;
   phone?: string;
   city?: string;
+  audience?: string;
   modality?: string;
   contactTime?: string;
   message?: string;
@@ -22,6 +23,7 @@ export async function POST(request: Request) {
   const email = body.email?.trim() ?? "";
   const phone = body.phone?.trim() ?? "";
   const city = body.city?.trim() ?? "";
+  const audience = body.audience?.trim() ?? "";
   const modality = body.modality?.trim() ?? "";
   const contactTime = body.contactTime?.trim() ?? "";
   const message = body.message?.trim() ?? "";
@@ -37,7 +39,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Informe um e-mail válido." }, { status: 400 });
   }
 
-  const notification = { name, email, phone, city, modality, contactTime, message };
+  const notification = { name, email, phone, city, audience, modality, contactTime, message };
 
   await Promise.allSettled([
     sendContactEmail(notification),

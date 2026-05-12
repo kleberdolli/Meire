@@ -6,9 +6,9 @@ export function TccHelps() {
     <section id="tcc" className="bg-surface py-20 sm:py-24">
       <div className="section-shell space-y-12">
         <SectionHeading
-          eyebrow="TCC"
-          title="Como a Terapia Cognitivo-Comportamental pode ajudar"
-          description="A TCC é uma abordagem estruturada e baseada em evidências, voltada à compreensão da relação entre pensamentos, emoções e comportamentos, respeitando a singularidade de cada pessoa."
+          eyebrow="Abordagem TCC"
+          title="Abordagem TCC — Terapia Cognitivo-Comportamental"
+          description="A Terapia Cognitivo-Comportamental é uma abordagem estruturada que auxilia na compreensão da relação entre pensamentos, emoções e comportamentos. O processo terapêutico é construído com cuidado, orientação, respeito à história de cada pessoa e atenção às expectativas possíveis dentro do acompanhamento psicológico."
           align="center"
         />
 

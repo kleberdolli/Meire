@@ -19,7 +19,7 @@ export function Header() {
             {site.shortName}
           </span>
           <span className="text-xs uppercase tracking-[0.22em] text-[#D8C3A5]">
-            Psicóloga · <span className="text-[#C9A45C]">CRP {site.crp}</span>
+            {site.profession} · <span className="text-[#C9A45C]">CRP {site.crp}</span>
           </span>
         </a>
 

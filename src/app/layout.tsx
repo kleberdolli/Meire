@@ -22,14 +22,16 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Atendimento psicológico com Terapia Cognitivo-Comportamental (TCC) e formação em Neuropsicologia. Acolhimento profissional com Meire Ribeiro, CRP 03/13940.",
+    "Atendimento psicológico para adultos e idosos com Abordagem TCC — Terapia Cognitivo-Comportamental. Psicóloga / Neuropsicóloga Meire Ribeiro, CRP 03/13949. Presencial na Chapada Diamantina e online para todo o Brasil.",
   keywords: [
     "psicóloga",
+    "neuropsicóloga",
     "TCC",
     "terapia cognitivo-comportamental",
-    "neuropsicologia",
     "Meire Ribeiro",
-    "CRP 03/13940",
+    "CRP 03/13949",
+    "Chapada Diamantina",
+    "atendimento online",
   ],
   robots: {
     index: true,

@@ -8,7 +8,7 @@ export function WhatToExpect() {
         <SectionHeading
           eyebrow="Processo terapêutico"
           title="O que você pode esperar do processo terapêutico"
-          description="Em vez de promessas, este espaço apresenta princípios éticos que orientam o cuidado psicológico."
+          description="Um cuidado atento às expectativas, à orientação clínica e ao respeito pela sua história, com uma escuta qualificada e acolhedora."
           align="center"
         />
 

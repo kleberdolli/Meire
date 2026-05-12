@@ -1,15 +1,17 @@
 export const site = {
   name: "Psicóloga Meire Ribeiro",
   shortName: "Meire Ribeiro",
-  crp: "03/13940",
-  specialty: "Terapia Cognitivo-Comportamental — TCC",
-  education: "Pós-graduação em Neuropsicologia",
+  crp: "03/13949",
+  profession: "Psicóloga / Neuropsicóloga",
+  specialty: "Abordagem TCC — Terapia Cognitivo-Comportamental",
   whatsappDisplay: "71 98819-0964",
   whatsappLink: "https://wa.me/5571988190964",
   instagramLink:
     "https://www.instagram.com/psicologameire_ribeiro?igsh=c3R3MWExcG1jNmJt",
   whatsappMessage:
-    "Olá, Meire. Gostaria de saber mais sobre o atendimento psicológico.",
+    "Olá, Meire. Vim pelo site e gostaria de informações sobre atendimento psicológico.",
+  whatsappScheduleMessage:
+    "Olá, Meire. Vim pelo site e gostaria de agendar um atendimento psicológico.",
   email: "contato@meireribeiro.com.br",
   url: "https://meireribeiro.com.br",
 } as const;
@@ -26,59 +28,49 @@ export const navigation = [
 
 export const tccDemands = [
   {
-    title: "Ansiedade e preocupação",
+    title: "Ansiedade e estresse",
     description:
-      "Compreender padrões de pensamento e desenvolver estratégias para lidar com a ansiedade no dia a dia.",
+      "Compreender padrões de pensamento e desenvolver estratégias para lidar com a ansiedade e o estresse no dia a dia.",
   },
   {
-    title: "Humor e autocuidado",
+    title: "Depressão",
     description:
-      "Acolher experiências emocionais e construir rotinas mais sustentáveis para o bem-estar.",
+      "Acolher experiências de baixo humor e apoiar a construção de rotinas mais sustentáveis para o bem-estar emocional.",
   },
   {
-    title: "Autoconhecimento",
+    title: "TDAH e dificuldades de atenção",
     description:
-      "Explorar crenças, valores e comportamentos para tomar decisões com mais clareza e segurança.",
+      "Trabalhar estratégias práticas para organização, foco e manejo das dificuldades relacionadas à atenção.",
   },
   {
-    title: "Relacionamentos",
+    title: "Dependência química",
     description:
-      "Fortalecer comunicação, limites e vínculos de forma respeitosa e consciente.",
+      "Apoio psicológico estruturado para compreensão dos fatores emocionais e cognitivos envolvidos na dependência.",
   },
   {
-    title: "Estresse e transições",
+    title: "Dificuldades de aprendizagem e habilidades sociais",
     description:
-      "Enfrentar mudanças, cobranças e sobrecarga com apoio terapêutico estruturado.",
+      "Identificar e trabalhar barreiras no aprendizado e no desenvolvimento de habilidades de convívio social.",
   },
   {
-    title: "Organização emocional",
+    title: "Autoconhecimento e desenvolvimento pessoal",
     description:
-      "Desenvolver recursos para lidar com emoções intensas e situações desafiadoras.",
+      "Explorar crenças, valores e comportamentos para tomar decisões com mais clareza, segurança e autonomia.",
   },
   {
-    title: "Baixa autoestima",
+    title: "Questões emocionais e vulnerabilidade social",
     description:
-      "Identificar e trabalhar crenças limitantes que afetam a percepção de si mesmo e das próprias capacidades.",
-  },
-  {
-    title: "Pensamentos repetitivos",
-    description:
-      "Compreender e manejar padrões de ruminação, obsessão ou pensamentos intrusivos que causam sofrimento.",
-  },
-  {
-    title: "Procrastinação",
-    description:
-      "Explorar os fatores emocionais e cognitivos por trás do adiamento e construir estratégias práticas de ação.",
-  },
-  {
-    title: "Medos e inseguranças",
-    description:
-      "Trabalhar de forma gradual e estruturada situações de medo, fobia ou insegurança que limitam a vida cotidiana.",
+      "Acolhimento e orientação psicológica para pessoas que enfrentam situações de vulnerabilidade social e emocional.",
   },
   {
     title: "Regulação emocional",
     description:
       "Ampliar o repertório para identificar, nomear e regular emoções com mais autonomia e equilíbrio.",
+  },
+  {
+    title: "Relacionamentos",
+    description:
+      "Fortalecer comunicação, limites e vínculos de forma respeitosa e consciente.",
   },
 ] as const;
 
@@ -99,7 +91,7 @@ export const attendanceSteps = [
     step: "03",
     title: "Plano terapêutico",
     description:
-      "A partir da avaliação, definimos focos de trabalho com base na TCC e no seu ritmo de cuidado.",
+      "A partir da avaliação, definimos focos de trabalho com base na Abordagem TCC e no seu ritmo de cuidado.",
   },
   {
     step: "04",
@@ -116,9 +108,9 @@ export const processExpectations = [
       "Um espaço respeitoso para falar sobre o que você vive, sem julgamentos e com atenção à sua singularidade.",
   },
   {
-    title: "Clareza no processo",
+    title: "Orientação clínica",
     description:
-      "Orientações transparentes sobre objetivos, frequência e possibilidades do acompanhamento psicológico.",
+      "Um cuidado atento às expectativas, à orientação clínica e ao respeito pela sua história, com escuta qualificada.",
   },
   {
     title: "Trabalho colaborativo",
@@ -154,7 +146,7 @@ export const faqItems = [
   {
     question: "O atendimento é presencial ou online?",
     answer:
-      "As modalidades podem ser combinadas conforme disponibilidade e necessidade. Os detalhes são alinhados no primeiro contato.",
+      "O atendimento presencial é realizado na Chapada Diamantina. O atendimento online está disponível para adultos e idosos em todo o Brasil. Os detalhes são alinhados no primeiro contato.",
   },
   {
     question: "Com que frequência acontecem as sessões?",

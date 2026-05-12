@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 
+type Audience = "adulto" | "idoso" | "";
 type Modality = "presencial" | "online" | "nao_sei" | "";
 
 type FormState = {
@@ -12,6 +13,7 @@ type FormState = {
   email: string;
   phone: string;
   city: string;
+  audience: Audience;
   modality: Modality;
   contactTime: string;
   message: string;
@@ -23,6 +25,7 @@ const initialState: FormState = {
   email: "",
   phone: "",
   city: "",
+  audience: "",
   modality: "",
   contactTime: "",
   message: "",
@@ -64,6 +67,7 @@ export function BudgetForm() {
           email: form.email,
           phone: form.phone,
           city: form.city,
+          audience: form.audience,
           modality: form.modality,
           contactTime: form.contactTime,
           message: form.message,
@@ -93,7 +97,7 @@ export function BudgetForm() {
         <SectionHeading
           eyebrow="Contato"
           title="Solicite informações sobre atendimento"
-          description="Preencha o formulário para receber orientações sobre disponibilidade, valores e formato de atendimento."
+          description="Preencha o formulário para receber informações sobre disponibilidade, valores, modalidade de atendimento e agendamento."
         />
 
         <form
@@ -115,7 +119,7 @@ export function BudgetForm() {
             </label>
 
             <label className="flex flex-col gap-2 text-sm font-medium text-coffee">
-              <span>Telefone / WhatsApp</span>
+              <span>WhatsApp</span>
               <input
                 required
                 type="tel"
@@ -156,8 +160,22 @@ export function BudgetForm() {
             </label>
           </div>
 
-          {/* Modalidade + Horário */}
+          {/* Público + Modalidade */}
           <div className="grid gap-5 sm:grid-cols-2">
+            <label className="flex flex-col gap-2 text-sm font-medium text-coffee">
+              <span>Público</span>
+              <select
+                value={form.audience}
+                onChange={(e) => set("audience", e.target.value as Audience)}
+                className={inputClass}
+                name="audience"
+              >
+                <option value="">Selecione</option>
+                <option value="adulto">Adulto</option>
+                <option value="idoso">Idoso</option>
+              </select>
+            </label>
+
             <label className="flex flex-col gap-2 text-sm font-medium text-coffee">
               <span>Modalidade desejada</span>
               <select
@@ -167,27 +185,28 @@ export function BudgetForm() {
                 name="modality"
               >
                 <option value="">Selecione</option>
-                <option value="presencial">Presencial</option>
+                <option value="presencial">Presencial — Chapada Diamantina</option>
                 <option value="online">Online</option>
                 <option value="nao_sei">Ainda não sei</option>
               </select>
             </label>
-
-            <label className="flex flex-col gap-2 text-sm font-medium text-coffee">
-              <span>Melhor horário para contato</span>
-              <input
-                value={form.contactTime}
-                onChange={(e) => set("contactTime", e.target.value)}
-                className={inputClass}
-                name="contactTime"
-                placeholder="Ex: manhã, após 18h…"
-              />
-            </label>
           </div>
+
+          {/* Horário */}
+          <label className="flex flex-col gap-2 text-sm font-medium text-coffee">
+            <span>Melhor horário para contato</span>
+            <input
+              value={form.contactTime}
+              onChange={(e) => set("contactTime", e.target.value)}
+              className={inputClass}
+              name="contactTime"
+              placeholder="Ex: manhã, após 18h…"
+            />
+          </label>
 
           {/* Mensagem */}
           <label className="flex flex-col gap-2 text-sm font-medium text-coffee">
-            <span>Como posso ajudar?</span>
+            <span>Mensagem</span>
             <textarea
               required
               value={form.message}

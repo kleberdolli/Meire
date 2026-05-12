@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { AttendanceModalities } from "@/components/AttendanceModalities";
 import { BudgetForm } from "@/components/BudgetForm";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <About />
         <TccHelps />
         <HowItWorks />
+        <AttendanceModalities />
         <StrategicPhotos />
         <WhatToExpect />
         <BudgetForm />

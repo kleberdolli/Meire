@@ -60,7 +60,7 @@ export async function sendContactEmail(
       <h2 style="color:#4a3428;margin-top:0">Nova solicitação de informações sobre atendimento</h2>
       <p style="color:#6f5d4f;line-height:1.8">${lines.join("<br>")}</p>
       <hr style="border:none;border-top:1px solid #e8dfd2;margin:20px 0">
-      <p style="color:#b8965e;font-size:12px">Psicóloga Meire Ribeiro · CRP 03/13940</p>
+      <p style="color:#b8965e;font-size:12px">Psicóloga / Neuropsicóloga Meire Ribeiro · CRP 03/13949</p>
     </div>
   `;
 

@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
-  const whatsappHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
+  const whatsappInfoHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappMessage)}`;
+  const whatsappScheduleHref = `${site.whatsappLink}?text=${encodeURIComponent(site.whatsappScheduleMessage)}`;
 
   return (
     <section id="inicio" className="relative overflow-hidden pb-20 pt-10 sm:pb-24 sm:pt-16">
@@ -17,25 +18,26 @@ export function Hero() {
 
           <div className="space-y-5">
             <h1 className="glow-text max-w-2xl font-serif text-4xl leading-[1.05] text-coffee-deep sm:text-5xl lg:text-6xl">
-              Psicoterapia com acolhimento, método e responsabilidade
-              profissional.
+              Psicoterapia com acolhimento, método e respeito à sua história.
             </h1>
             <p className="max-w-xl text-lg leading-8 text-muted">
-              Atendimento psicológico com base na Terapia
-              Cognitivo-Comportamental, integrando escuta clínica, ética e olhar
-              ampliado pela Neuropsicologia.
+              Atendimento psicológico para adultos e idosos, com base na{" "}
+              Abordagem TCC — Terapia Cognitivo-Comportamental, presencialmente
+              na Chapada Diamantina e online para todo o Brasil.
             </p>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button href="#contato">Solicitar informações</Button>
-            <Button href={whatsappHref} variant="secondary">
-              Conversar no WhatsApp
+            <Button href={whatsappScheduleHref}>
+              Agendar atendimento
+            </Button>
+            <Button href="#contato" variant="secondary">
+              Solicitar informações
             </Button>
           </div>
 
           <p className="text-sm text-muted">
-            CRP {site.crp} · {site.education}
+            {site.profession} — CRP {site.crp}
           </p>
         </div>
 
