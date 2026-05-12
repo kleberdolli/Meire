@@ -8,7 +8,7 @@ export function TccHelps() {
         <SectionHeading
           eyebrow="TCC"
           title="Como a Terapia Cognitivo-Comportamental pode ajudar"
-          description="A TCC é uma abordagem estruturada e baseada em evidências, voltada à compreensão da relação entre pensamentos, emoções e comportamentos."
+          description="A TCC é uma abordagem estruturada e baseada em evidências, voltada à compreensão da relação entre pensamentos, emoções e comportamentos, respeitando a singularidade de cada pessoa."
           align="center"
         />
 

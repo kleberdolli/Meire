@@ -9,9 +9,12 @@ export function Footer() {
       <div className="section-shell grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
           <p className="font-serif text-3xl">{site.name}</p>
+          <p className="mt-1 text-sm font-medium tracking-wide text-gold">
+            CRP {site.crp}
+          </p>
           <p className="mt-3 max-w-xl text-sm leading-7 text-gold-soft">
             Atendimento psicológico com escuta, ética e responsabilidade
-            profissional. CRP {site.crp}.
+            profissional.
           </p>
         </div>
 

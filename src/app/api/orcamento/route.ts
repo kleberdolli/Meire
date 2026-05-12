@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 import { sendBudgetNotificationToTelegram } from "@/lib/telegram";
 
-type BudgetPayload = {
+type ContactPayload = {
   name?: string;
   email?: string;
   phone?: string;
+  city?: string;
+  modality?: string;
+  contactTime?: string;
   message?: string;
 };
 
@@ -13,10 +16,13 @@ function isValidEmail(email: string) {
 }
 
 export async function POST(request: Request) {
-  const body = (await request.json()) as BudgetPayload;
+  const body = (await request.json()) as ContactPayload;
   const name = body.name?.trim() ?? "";
   const email = body.email?.trim() ?? "";
   const phone = body.phone?.trim() ?? "";
+  const city = body.city?.trim() ?? "";
+  const modality = body.modality?.trim() ?? "";
+  const contactTime = body.contactTime?.trim() ?? "";
   const message = body.message?.trim() ?? "";
 
   if (!name || !email || !phone || !message) {
@@ -34,6 +40,9 @@ export async function POST(request: Request) {
     name,
     email,
     phone,
+    city,
+    modality,
+    contactTime,
     message,
   });
 

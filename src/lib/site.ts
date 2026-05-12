@@ -18,7 +18,7 @@ export const navigation = [
   { href: "#tcc", label: "TCC" },
   { href: "#atendimento", label: "Atendimento" },
   { href: "#expectativas", label: "Processo" },
-  { href: "#orcamento", label: "Orçamento" },
+  { href: "#contato", label: "Contato" },
   { href: "#faq", label: "FAQ" },
 ] as const;
 
@@ -53,6 +53,31 @@ export const tccDemands = [
     description:
       "Desenvolver recursos para lidar com emoções intensas e situações desafiadoras.",
   },
+  {
+    title: "Baixa autoestima",
+    description:
+      "Identificar e trabalhar crenças limitantes que afetam a percepção de si mesmo e das próprias capacidades.",
+  },
+  {
+    title: "Pensamentos repetitivos",
+    description:
+      "Compreender e manejar padrões de ruminação, obsessão ou pensamentos intrusivos que causam sofrimento.",
+  },
+  {
+    title: "Procrastinação",
+    description:
+      "Explorar os fatores emocionais e cognitivos por trás do adiamento e construir estratégias práticas de ação.",
+  },
+  {
+    title: "Medos e inseguranças",
+    description:
+      "Trabalhar de forma gradual e estruturada situações de medo, fobia ou insegurança que limitam a vida cotidiana.",
+  },
+  {
+    title: "Regulação emocional",
+    description:
+      "Ampliar o repertório para identificar, nomear e regular emoções com mais autonomia e equilíbrio.",
+  },
 ] as const;
 
 export const attendanceSteps = [
@@ -60,7 +85,7 @@ export const attendanceSteps = [
     step: "01",
     title: "Primeiro contato",
     description:
-      "Você envia sua solicitação ou fala pelo WhatsApp para alinharmos disponibilidade e principais demandas.",
+      "Você envia sua mensagem ou fala pelo WhatsApp para alinharmos disponibilidade e principais demandas.",
   },
   {
     step: "02",
@@ -135,9 +160,9 @@ export const faqItems = [
       "A frequência é definida de forma individualizada, geralmente semanal ou quinzenal, de acordo com o plano terapêutico.",
   },
   {
-    question: "Como solicitar orçamento?",
+    question: "Como saber sobre disponibilidade e valores?",
     answer:
-      "Você pode preencher o formulário desta página ou entrar em contato pelo WhatsApp para receber orientações sobre valores e disponibilidade.",
+      "Você pode preencher o formulário de contato nesta página ou enviar uma mensagem pelo WhatsApp para receber orientações sobre disponibilidade e informações sobre o atendimento.",
   },
   {
     question: "O site substitui avaliação clínica?",

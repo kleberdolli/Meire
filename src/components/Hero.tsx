@@ -17,17 +17,18 @@ export function Hero() {
 
           <div className="space-y-5">
             <h1 className="glow-text max-w-2xl font-serif text-4xl leading-[1.05] text-coffee-deep sm:text-5xl lg:text-6xl">
-              Um espaço acolhedor para cuidar da sua saúde emocional com
-              profissionalismo.
+              Psicoterapia com acolhimento, método e responsabilidade
+              profissional.
             </h1>
             <p className="max-w-xl text-lg leading-8 text-muted">
-              Atendimento psicológico com {site.shortName}, com escuta atenta,
-              ética e base na Terapia Cognitivo-Comportamental.
+              Atendimento psicológico com base na Terapia
+              Cognitivo-Comportamental, integrando escuta clínica, ética e olhar
+              ampliado pela Neuropsicologia.
             </p>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button href="#orcamento">Solicitar orçamento</Button>
+            <Button href="#contato">Solicitar informações</Button>
             <Button href={whatsappHref} variant="secondary">
               Conversar no WhatsApp
             </Button>
